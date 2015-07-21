@@ -23,13 +23,20 @@ public class FileUtils {
 
     /**
      *@author ZZB
-     *@desc 获取外部缓存目录
+     *desc 获取外部缓存目录
+     * @param context context
+     * @return 返回缓存路径
      * /storage/emulated/0/Android/data/[packagename]/cache
      */
     public static String getExternalCacheDir(Context context){
         File file = context.getExternalCacheDir();
         return file.getPath();
     }
+    /**
+     *@author ZZB
+     * @param file 要保存的文件
+     * @return 返回读的文件内容
+     */
     public static String readFile(File file) {
         if (file == null || !file.exists()) {
             return "";
@@ -58,9 +65,11 @@ public class FileUtils {
     }
 
     /**
-     * @description 读取文件
-     * @created 2015-4-2 下午2:29:56
+     * description 读取文件
+     * 2015-4-2 下午2:29:56
      * @author ZZB
+     * @param filePath 文件路径
+     * @return 返回文件内容
      */
     public static String readFile(String filePath) {
         File file = new File(filePath);
@@ -68,9 +77,10 @@ public class FileUtils {
     }
 
     /**
-     * @description 写文件
-     * @created 2015-1-5 上午9:24:43
+     * description 写文件
+     * 2015-1-5 上午9:24:43
      * @author ZZB
+     * @param content 文件内容
      */
     public static void writeFile(String content) {
         PrintWriter pw = null;
@@ -98,9 +108,10 @@ public class FileUtils {
     }
 
     /**
-     * @description 把错误写到文件中
-     * @created 2014-12-23 上午10:33:28
+     * description 把错误写到文件中
+     * 2014-12-23 上午10:33:28
      * @author ZZB
+     * @param e 要写入的异常
      */
     public static void writeErrorToFile(Exception e) {
         PrintWriter pw = null;
@@ -128,9 +139,12 @@ public class FileUtils {
     }
 
     /**
-     * @description 保存bitmap
-     * @created 2014-11-19 下午5:23:03
+     * description 保存bitmap
+     * 2014-11-19 下午5:23:03
      * @author ZZB
+     * @param savePath 保存的路径
+     * @param bitmap 图片
+     * @throws Exception if file cannot be opened for writing.
      */
     public static void saveBitmap(String savePath, Bitmap bitmap) throws Exception {
         saveBitmap(savePath, bitmap, 100);
@@ -138,9 +152,12 @@ public class FileUtils {
 
     /**
      * @param quality 0-100, 100是压缩最好的质量
-     * @description 保存bitmap
-     * @created 2014-11-19 下午5:23:03
+     * @param bitmap 图片
+     * @param savePath 保存的路径
+     * description 保存bitmap
+     * 2014-11-19 下午5:23:03
      * @author ZZB
+     * @throws Exception if file cannot be opened for writing.
      */
     public static void saveBitmap(String savePath, Bitmap bitmap, int quality) throws Exception {
         File f = new File(savePath);

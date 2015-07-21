@@ -7,8 +7,6 @@ android {
     defaultConfig {
         minSdkVersion 12
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
     }
     buildTypes {
         release {
@@ -25,6 +23,9 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
 }
+
 //apply from: 'url'
 apply from: rootProject.file('gradle/android-artifacts.gradle')
 apply from: rootProject.file('gradle/gradle-jcenter-push.gradle')
+
+
