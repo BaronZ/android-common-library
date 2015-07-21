@@ -17,27 +17,33 @@ public class TimeUtils {
     public static final long DAY_MILLIS = 24 * HOUR_MILLIS;
     private static LruCache<String, SimpleDateFormat> sCachedFormats = new LruCache<String, SimpleDateFormat>(10);
 
+
     /**
-     * @description 获取当天默认格式的日期字符串
-     * @created 2015-4-2 下午2:12:39
+     * 获取当天默认格式的日期字符串
+     * @return 格式化日期
      * @author ZZB
      */
     public static String getDefaultTimeStamp() {
         return millisToTimestamp(System.currentTimeMillis(), DEFAULT_DATE_FORMAT);
     }
 
+
     /**
-     * @description 获取当天默认格式的日期字符串
-     * @created 2015-4-2 下午2:12:39
+     * 获取当天默认格式的日期字符串
+     * @param millis 时间毫秒
+     * @return  格式化日期
      * @author ZZB
      */
     public static String getDefaultTimeStamp(long millis) {
         return millisToTimestamp(millis, DEFAULT_DATE_FORMAT);
     }
 
+    
     /**
-     * @description 日期转为距今多少天
-     * @created 2015-3-4 下午1:47:53
+     * 日期转为距今多少天
+     * @param format 格式
+     * @param date 日期字符串
+     * @return 格式化日期
      * @author ZZB
      */
     public static String timeStampToDaysElapsed(String format, String date) {
@@ -53,6 +59,12 @@ public class TimeUtils {
         }
     }
 
+    /**
+     * 获取DateFormat
+     * @param template 日期格式
+     * @return SimpleDateFormat
+     * @author ZZB
+     */
     private static SimpleDateFormat getDateFormat(String template) {
         SimpleDateFormat format = sCachedFormats.get(template);
         if (format == null) {
@@ -66,8 +78,10 @@ public class TimeUtils {
     }
 
     /**
-     * @description 毫秒转为日期
-     * @created 2014-8-13 下午3:43:30
+     * 毫秒转为日期
+     * @param millis 时间毫秒
+     * @param template 日期格式
+     * @return  格式化日期
      * @author ZZB
      */
     public static String millisToTimestamp(long millis, String template) {
@@ -75,9 +89,12 @@ public class TimeUtils {
         return sdf.format(new Date(millis));
     }
 
+
     /**
-     * @description Date转为日期
-     * @created 2014-8-13 下午3:52:33
+     * Date转为日期
+     * @param date Date
+     * @param template 日期格式
+     * @return  格式化日期
      * @author ZZB
      */
     public static String dateToTimeStamp(Date date, String template) {
@@ -86,8 +103,10 @@ public class TimeUtils {
     }
 
     /**
-     * @description 字符串转为Date
-     * @created 2015-1-14 下午5:57:54
+     * 字符串转为Date
+     * @param timeStamp 日期字符串
+     * @param template 日期格式
+     * @return Date
      * @author ZZB
      */
     public static Date timeStampToDate(String timeStamp, String template) {
@@ -101,9 +120,12 @@ public class TimeUtils {
         return date;
     }
 
+
     /**
-     * @description 日期转为毫秒
-     * @created 2015-3-4 下午2:08:45
+     * 日期转为毫秒
+     * @param timeStamp 日期字符串
+     * @param template 日期格式
+     * @return 毫秒
      * @author ZZB
      */
     public static long timeStampToMillis(String timeStamp, String template) {
@@ -111,8 +133,9 @@ public class TimeUtils {
     }
 
     /**
-     * @description 日期转为毫秒，使用默认格式
-     * @created 2015-3-13 下午4:29:02
+     * 日期转为毫秒，使用默认格式
+     * @param timeStamp 日期字符串
+     * @return 毫秒
      * @author ZZB
      */
     public static long timeStampToMillis(String timeStamp) {

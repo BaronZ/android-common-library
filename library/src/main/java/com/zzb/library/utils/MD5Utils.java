@@ -11,14 +11,19 @@ public class MD5Utils {
 
     /**
      * MD5加密(32位)
+     * @param str 要加密的字符串
+     * @return 加密结果
      */
     public static String encrypt32bit(String str) {
         String result = encrypt(str);
         return result;
     }
 
+
     /**
      * MD5加密(16位)
+     * @param str 要加密的字符串
+     * @return 加密结果
      */
     public static String encrypt16bit(String str) {
         String result = encrypt(str);
@@ -27,8 +32,11 @@ public class MD5Utils {
         return result;
     }
 
+
     /**
      * MD5加密
+     * @param str 要加密的字符串
+     * @return 加密结果
      */
     private static String encrypt(String str) {
         String result = "";
@@ -55,6 +63,10 @@ public class MD5Utils {
         return result;
     }
 
+    /**
+     * @param buffer buffer
+     * @return string
+     */
     public final static String getMessageDigest(byte[] buffer) {
         char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
         try {

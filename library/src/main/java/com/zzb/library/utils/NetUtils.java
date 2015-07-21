@@ -8,8 +8,11 @@ import android.net.ConnectivityManager;
  */
 public class NetUtils {
 
+
     /**
-     * 判断wifi 是否可用
+     * wifi 是否可用
+     * @param context context
+     * @return true 可用
      */
     public static boolean isWifiDataEnable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
@@ -18,7 +21,11 @@ public class NetUtils {
         isWifiDataEnable = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
         return isWifiDataEnable;
     }
-
+    /**
+     * 网络是否可用
+     * @param context context
+     * @return true 可用
+     */
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
