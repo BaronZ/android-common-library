@@ -13,7 +13,7 @@ ChangeLog
 --------
 * 150729
 
-[DisplayUtils.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/picasso/transformation/DisplayUtils.java)
+[DisplayUtils.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/utils/DisplayUtils.java)
 * 150728
 
 Picasso直接转圆形图片，用原生ImageView
