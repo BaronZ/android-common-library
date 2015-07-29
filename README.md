@@ -13,6 +13,8 @@ ChangeLog
 --------
 * 150729
 
+获取屏幕宽度高度，dp、px互相转换
+
 [DisplayUtils.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/utils/DisplayUtils.java)
 * 150728
 
