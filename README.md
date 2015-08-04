@@ -11,6 +11,11 @@ compile 'com.zzb.library:android-common:版本号'//版本号看上面download�
 
 ChangeLog
 --------
+* 150814
+
+[DecodeBitmapUtils.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/utils/DecodeBitmapUtils.java)//Decode bitmap的工具类，避免OOM
+
+[AnimUtils.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/utils/AnimUtils.java)//动画工具类
 * 150729
 
 获取屏幕宽度高度，dp、px互相转换
