@@ -25,9 +25,9 @@ ChangeLog
 
 Picasso直接转圆形图片，用原生ImageView
 
-[CircleTransformation.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/picasso/transformation/CircleTransformation.java)
+[CircleTransformation.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/picasso/transformation/CircleTransformation.java)//有边框
 
-[RoundedTransformation.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/picasso/transformation/RoundedTransformation.java)
+[RoundedTransformation.java](https://github.com/BaronZ/android-common-library/blob/master/library/src/main/java/com/zzb/library/picasso/transformation/RoundedTransformation.java)//无边框
 
 * 150721
 
